@@ -3,7 +3,7 @@ cask "twig" do
   name "twig"
   desc ""
   homepage ""
-  version "0.1.1"
+  version "0.1.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,28 @@ cask "twig" do
   on_macos do
     on_intel do
       url "https://github.com/708u/twig/releases/download/v#{version}/twig_Darwin_x86_64.tar.gz"
-      sha256 "a7c534af3ae738eddde745f8fcf1b59ed6a90d7aa638819b816b34ce1270483e"
+      sha256 "4123ae674686bae4ef8431776ac72b85c0d7b619a8403f4f5b5d307cd9b6f09b"
     end
     on_arm do
       url "https://github.com/708u/twig/releases/download/v#{version}/twig_Darwin_arm64.tar.gz"
-      sha256 "f452ec7a348471428e8f361fef33d4aa5d88b3640c792b8a58f83d9dcc6e8efa"
+      sha256 "74f6e4f74a7d633720a2516fa31c6cb570cdcdba6010e54ca158dfd0e8532cb1"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/708u/twig/releases/download/v#{version}/twig_Linux_x86_64.tar.gz"
-      sha256 "e6f07649a963f8a942dfaa0e6bf44f5d23ebe2657b3ae7d2fdc0c4bdd03184c7"
+      sha256 "f0397f4d2a608389b5251149f4682343181ca2e35a517d29a152a2894862b868"
     end
     on_arm do
       url "https://github.com/708u/twig/releases/download/v#{version}/twig_Linux_arm64.tar.gz"
-      sha256 "5f7aadb6d87bfeb5f80ee47027d3ca33bfd7451029f307d31cf7ca5fc553e6f2"
+      sha256 "75ef3986732068541a69e507b9fa411321a2e96501575fa1f7c93cd40bb29f86"
+    end
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/twig"]
     end
   end
 
