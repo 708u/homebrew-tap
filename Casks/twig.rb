@@ -3,7 +3,7 @@ cask "twig" do
   name "twig"
   desc "Simplify git worktree workflows with automatic branch creation, symlinks, and change syncing"
   homepage "https://github.com/708u/twig"
-  version "0.10.0"
+  version "0.10.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -17,22 +17,22 @@ cask "twig" do
   on_macos do
     on_intel do
       url "https://github.com/708u/twig/releases/download/v#{version}/twig_Darwin_x86_64.tar.gz"
-      sha256 "53bbb76e7a3a28131b29bc293cc7ed5a3d6a9eff563be2acfaa29b3d3a7c84e5"
+      sha256 "7a629479473fb6d0bdebe1e4fcd82ca7cfffeae78bb50f293b89967440e60c91"
     end
     on_arm do
       url "https://github.com/708u/twig/releases/download/v#{version}/twig_Darwin_arm64.tar.gz"
-      sha256 "d730a7d3dc8ccb47f1c9736639ce912c0b305c5b289f8c28470abfc49c1e2fbe"
+      sha256 "2be018458374599ea4e6c315db6d456f3e95ab1f170a43dec4c000c4ed869fc5"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/708u/twig/releases/download/v#{version}/twig_Linux_x86_64.tar.gz"
-      sha256 "9a9e366f3248be51864af451fe1e026434a1c477c9b0c12e3f6ac13aa2fe2da6"
+      sha256 "bd9c0a769f1fa6baa038fc96145b38374f2ccabb1a49ff6983fdd1c9bbb5f1d7"
     end
     on_arm do
       url "https://github.com/708u/twig/releases/download/v#{version}/twig_Linux_arm64.tar.gz"
-      sha256 "3b2ba5600b41c77253fc1675e10e55d6e58c3a200bd4a125f8d85d34e69d3774"
+      sha256 "72400d0c079a5d593f690f5248a564b1c1e95fc2dbb6a517cfd423760345a785"
     end
   end
 
