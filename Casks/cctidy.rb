@@ -3,7 +3,7 @@ cask "cctidy" do
   name "cctidy"
   desc "CLI tool that formats ~/.claude.json"
   homepage "https://github.com/708u/cctidy"
-  version "0.1.0"
+  version "0.1.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "cctidy" do
   on_macos do
     on_intel do
       url "https://github.com/708u/cctidy/releases/download/v#{version}/cctidy_Darwin_x86_64.tar.gz"
-      sha256 "1bc21aaedc6521db9c800b5f6535c02098f747cc0c3a38662cfa08efe2717c5d"
+      sha256 "6f6462255ec059b2cbc1303d9b0d38dc8291f9623a8d71c42e9632663d86dd2a"
     end
     on_arm do
       url "https://github.com/708u/cctidy/releases/download/v#{version}/cctidy_Darwin_arm64.tar.gz"
-      sha256 "4f9e8a8baa5f85db53924cc2ca865b28edbb2d66d91aab2723d0d885a3144046"
+      sha256 "08cec860736d0679260620f45ec7afb3a99f80fb438c797b17cc49ca9cd7949c"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/708u/cctidy/releases/download/v#{version}/cctidy_Linux_x86_64.tar.gz"
-      sha256 "7a3ab7a3f44ddd420450693493034de082534b36c4153325a3a943a7eeca8401"
+      sha256 "2bbec0466c5dd908246abf5eb6235e85df98a83f9ea10e8c6b46fc86eeb56adb"
     end
     on_arm do
       url "https://github.com/708u/cctidy/releases/download/v#{version}/cctidy_Linux_arm64.tar.gz"
-      sha256 "b67395e59026bc83aff1c4a33b390de8013155ab2bc34560f562c664ccc6efad"
+      sha256 "66e91087e8f385ba5f84392e0374b106d1b68d2b638cbb00e7ba4e3dc8ecd102"
     end
   end
 
